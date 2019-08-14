@@ -10,11 +10,11 @@ export class TextProcessor {
 
     }
 
-    startCommand(ctx: OurContext, commandName: CommandName) {
+    static startCommand(ctx: OurContext, commandName: CommandName) {
         ctx.session.activeCommand = commandName;
     }
 
-    endCommand(ctx: OurContext) {
+    static endCommand(ctx: OurContext) {
         ctx.session.activeCommand = '';
     }
 
