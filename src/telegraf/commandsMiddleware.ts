@@ -18,9 +18,8 @@ export class TextProcessor {
         ctx.session.activeCommand = '';
     }
 
-    middleware(ctx: OurContext) {
+    middleware = (ctx: OurContext) => {
         const handler = this.handlers[ctx.session.activeCommand];
         return handler ? handler(ctx) : this.defaultHandler(ctx);
-    }
-
+    };
 }
